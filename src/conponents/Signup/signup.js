@@ -1,30 +1,21 @@
 //import liraries
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, KeyboardAvoidingView } from 'react-native';
-import Logo from './logo';
-import LoginForm from './loginForm';
-import LoginWith from "./loginWith";
-import loginForm from './loginForm';
+import SignupForm from "./signupForm";
+import Logo from "../Login/logo";
+
 
 
 // create a component
-class Login extends Component {
+class Signup extends Component {
     render() {
         return (
             <KeyboardAvoidingView behavior='padding' style={styles.container}>
-
                 <View>
-                   <Logo />
+                    <Logo/>
                 </View>
-
                 <View>
-                    <LoginForm 
-                        navigation = {this.props.navigation}
-                    />
-                </View>
-
-                <View>
-                    <LoginWith/>
+                    <SignupForm/>
                 </View>
 
             </KeyboardAvoidingView>
@@ -41,4 +32,4 @@ const styles = StyleSheet.create({
 });
 
 //make this component available to the app
-export default Login;
+export default Signup;

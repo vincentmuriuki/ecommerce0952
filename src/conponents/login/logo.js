@@ -8,7 +8,7 @@ class Logo extends Component {
         return (
             <View style={styles.logoContainer}>
                 <Image style={styles.logo}
-                   source={require('../images/logo.png')}
+                   source={require('../../images/logo.png')}
                 />
             </View>
         );

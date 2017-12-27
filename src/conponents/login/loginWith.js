@@ -21,21 +21,21 @@ class LoginWith extends Component {
                     <TouchableOpacity>
                         <Image
                             style={styles.iconImage}
-                            source={require('../images/fb_icon.png')}
+                            source={require('../../images/fb_icon.png')}
                         />
                     </TouchableOpacity>
 
                     <TouchableOpacity>
                         <Image
                             style={styles.iconImage}
-                            source={require('../images/google_icon.png')}
+                            source={require('../../images/google_icon.png')}
                         />
                     </TouchableOpacity>
 
                     <TouchableOpacity>
                         <Image
                             style={styles.iconImage}
-                            source={require('../images/zalo_icon.png')}
+                            source={require('../../images/zalo_icon.png')}
                         />
                     </TouchableOpacity>
                 </View>
@@ -44,7 +44,7 @@ class LoginWith extends Component {
                     <Text style={{color:'white'}}>Don't have an account ? </Text>
                     <TouchableOpacity>
                         <Text style={styles.signupText}>
-                            SIGN UP
+                            JOIN US
                         </Text>
                     </TouchableOpacity>
                 </View>

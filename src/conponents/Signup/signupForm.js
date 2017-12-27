@@ -1,36 +1,37 @@
 //import liraries
 import React, { Component } from 'react';
-import { View, Text, StyleSheet,TouchableOpacity, TextInput} from 'react-native';
+import {
+    View,
+    Text,
+    StyleSheet,
+    Image,
+    KeyboardAvoidingView,
+    TextInput,
+    TouchableOpacity,
+    CheckBox
+} from 'react-native';
+
+
+
 
 // create a component
-class LoginForm extends Component {
-    constructor(props){
-        super(props);
-        this.state={
-            email:"###",
-            password: "###",
-        }
-    }
-
-    checkAccount(){
-        this.setState({
-            email:"mail",
-            password:"pass",
-        })
-    }
-
+class SignupForm extends Component {
     render() {
         return (
             <View style={styles.container}>
                 <TextInput
-                    placeholder='Email'
+                    placeholder='User name'
+                    autoFocus={true}
+                    style={styles.input}
+                />
+                <TextInput
+                    placeholder='Your Email'
                     placeholderTextColor='rgba(255,255,255,0.5)'
                     keyboardType='email-address' //kiểu nhập
                     autoCapitalize='none'
                     autoCorrect={false}
                     autoFocus={true}
                     style={styles.input}
-                    
                 />
                 <TextInput
                     placeholder='Password'
@@ -38,23 +39,27 @@ class LoginForm extends Component {
                     secureTextEntry
                     style={styles.input}
                 />
+                <TextInput
+                    placeholder='Confirm Password'
+                    placeholderTextColor='rgba(255,255,255,0.5)'
+                    secureTextEntry
+                    style={styles.input}
+                />
 
-                <TouchableOpacity>
-                    <Text style={styles.forgotPassword}>
-                        Forgot password ?
+                <TouchableOpacity style={styles.buttonContainer}>
+                    <Text style={styles.buttonText}>
+                        Try it Free and make a purchase
                     </Text>
                 </TouchableOpacity>
 
-                <View style={styles.buttonContainer}>
-                    <TouchableOpacity 
-                        onPress={()=> this.checkAccount()}
-                    >
-                        <Text style={styles.buttonText}>
-                            LOGIN
+                <View style={styles.login}>
+                    <Text style={{color:'white'}}>Already have an account ? </Text>
+                    <TouchableOpacity>
+                        <Text style={styles.loginText}>
+                            SIGN IN
                         </Text>
                     </TouchableOpacity>
                 </View>
-                
             </View>
         );
     }
@@ -87,16 +92,18 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
 
-    forgotPassword:{
-        paddingRight:10,
-        paddingVertical: 10,
-        textAlign: 'right',
-        color:'white',
-    }
+    login:{
+        paddingVertical: 30,
+        alignContent:'center',
+        flexDirection: 'row',
+        justifyContent: 'center'
+    },
 
+    loginText:{
+        fontWeight:'bold',
+        color:'white'
+    }
 });
 
-
-
 //make this component available to the app
-export default LoginForm;
+export default SignupForm;

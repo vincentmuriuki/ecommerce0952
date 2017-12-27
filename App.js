@@ -1,50 +1,11 @@
-import React from 'react';
-import { StyleSheet, Text, View,Button, } from 'react-native';
-import { StackNavigator } from 'react-navigation';
-import Login from './src/conponents/login/login';
+import React, { Component } from 'react';
+import { StyleSheet, Text, } from 'react-native';
+import {HomeStack} from "./src/conponents/Home/Router"
 
-class HomeScreen extends React.Component {
-    static navigationOptions = {
-        title: 'Sale0952',
-    };
+export default class Sale0952 extends Component {
     render() {
-        return(
-            <Login/>
-
+        return (
+            <HomeStack/>
         );
     }
-}
-
-class ChatScreen extends React.Component{
-  static navigationOptions = {
-    title: 'Chatacsdscd',
-  };
-  render(){
-    return(
-      <View>
-        <Text>This is chat screen.</Text>
-      </View>
-    );
-  }
-}
-
-const SimpleApp = StackNavigator({
-    Home: { screen: HomeScreen },
-    Chat: { screen: ChatScreen },
-});
-
-export default class App extends React.Component {
-    render() {
-        return <SimpleApp />;
-    }
-}
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center'
-    }
-});
-
+};
