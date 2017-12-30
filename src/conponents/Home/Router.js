@@ -10,7 +10,8 @@ import SignUp from "../Signup/signup";
 import Home from "./Home";
 
 //SideBar
-import SideBar from "./SideBar";
+import SideBar from "../SideBarLeft/SideBar";
+import SideBarDrawer from '../SideBarLeft/SideBarDrawer';
 
 //MainTab
 import HomeScreen from "./homeScreen";
@@ -42,8 +43,8 @@ export const HomeStack = StackNavigator({
         screen: SignUp,
     },
 
-    Home:{
-        screen: Home,
+    MainScreen:{
+        screen: SideBarDrawer,
     }
 });
 
@@ -74,13 +75,16 @@ export const MainTab = TabNavigator(
 export const SideBarLeft = DrawerNavigator(
     {
         Home: {
+            path: "/",
             screen: Home,
         },
         SideBar: {
+            path: "/sent",
             screen: SideBar,
         }
     },{
-
+        initialRouteName: 'Home',
+        drawerPosition: 'left'
     }
 );
 

@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Button,TouchableOpacity} from 'react-native';
 import Logo from "../Login/logo";
-import Home from "../Home/Home"
 
 
 
@@ -23,7 +22,7 @@ class OpeningScreen extends Component {
                 </View>
                 <View style={styles.button} >
                     <TouchableOpacity 
-                        onPress={()=> this.props.navigation.navigate('Home')}
+                        onPress={()=> this.props.navigation.navigate('MainScreen')}
                         >               
                         <Text style={styles.skip}>
                             Skip and start shoping now >

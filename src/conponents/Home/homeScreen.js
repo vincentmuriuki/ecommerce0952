@@ -2,9 +2,6 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet, Button, ListView} from 'react-native';
 
-
-
-
 // create a component
 class HomeScreen extends Component {
     constructor(props){
@@ -13,13 +10,10 @@ class HomeScreen extends Component {
             dataSource: new ListView.DataSource({rowHasChanged:(r1,r2)=>r1!==r2})
         }
     }
+    
     render() {
         return (
             <View>
-                <Button
-                    onPress={()=> this.props.navigation.navigate('SideBar')}
-                    title="Open Sidebar"
-                />
                 <ListView 
                 dataSource={this.state.dataSource}
                 renderRow={(row)=>
