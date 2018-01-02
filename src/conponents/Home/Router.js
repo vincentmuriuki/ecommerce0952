@@ -7,7 +7,8 @@ import {
 import {
     TabNavigator,
     StackNavigator,
-    DrawerNavigator
+    DrawerNavigator,
+    TabBarTop
 } from "react-navigation";
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -32,9 +33,12 @@ import OrderHistory from "../OrderHistory/OrderHistory";
 import Checkout from "../Checkout/Checkout";
 
 //MenuTab
-import Cpu from "./cpu";
+import Cpu from "../Home/CPU/cpu";
+import CPU_Intel from "../Home/CPU/CpuIntel";
+import CPU_AMD from "../Home/CPU/CpuAMD";
 import Ram from "./ram";
 import MainBoard from "./mainBoard";
+import VGA from './VGA/VGA'
 
 export const HomeStack = StackNavigator({
     OpeningScreen: {screen: OpeningScreen},
@@ -44,41 +48,17 @@ export const HomeStack = StackNavigator({
     SignUp: {screen: SignUp},
     SignupForm:{screen: SignupForm},
     MainScreen: {screen: SideBarDrawer},
-    Home:{screen: Home},
+    HomeScreen: {screen: HomeScreen},
     Header: {screen: Header},
     Cart: {screen: Cart},
 },{
     headerMode: 'none' ,
 });
 
-export const MainTab = TabNavigator({
-    HomeScreen: {
-        screen: HomeScreen,
-        navigationOptions: {
-            tabBarLabel: 'Home',
-            tabBarIcon: ({ tintColor }) => (
-                <Icon name="rocket" size={30} color="#900" />
-            ),
-            tabBarOptions:{
-                showIcon : true,
-                showLabel: true,
-            }
-        }
-    },
-    OrderHistory: {screen: OrderHistory},
-    Checkout: {screen: Checkout}
-}, {
-    tabBarPosition: 'bottom',
-    animationEnabled: true,
-    tabBarOptions: {
-        activeTintColor: '#D50000',
-    },
-});
-
 export const SideBarLeft = DrawerNavigator({
     Home: {
         path: "/",
-        screen: Home,
+        screen: HomeScreen,
     },
     SideBar: {
         path: "/sent",
@@ -90,14 +70,97 @@ export const SideBarLeft = DrawerNavigator({
 });
 
 export const MenuTab = TabNavigator({
-    Cpu: {screen: Cpu},
-    MainBoard: {screen: MainBoard},
-    Ram: {screen: Ram},
+    Cpu: {
+        screen: Cpu,
+        navigationOptions:{
+            tabBarLabel: 'Processor',
+            tabBarIcon: ({ tintColor }) => (
+                <Image
+                    source={require('../../images/appIcon/CPU.png')}
+                    style={[styles.icon, {tintColor: tintColor}]}
+                />
+            ),
+        }
+    },
+    MainBoard: {
+        screen: MainBoard,
+        navigationOptions:{
+            tabBarLabel: 'Mainboard',
+            tabBarIcon: ({ tintColor }) => (
+                <Image
+                    source={require('../../images/appIcon/MainBoard.png')}
+                    style={[styles.icon, {tintColor: tintColor}]}
+                />
+            ),
+        }
+    },
+    Ram: {
+        screen: Ram,
+        navigationOptions:{
+            tabBarLabel: 'RAM',
+            tabBarIcon: ({ tintColor }) => (
+                <Image
+                    source={require('../../images/appIcon/RAM.png')}
+                    style={[styles.icon, {tintColor: tintColor}]}
+                />
+            ),
+        }
+    },
+    Vga: {
+        screen: VGA,
+        navigationOptions:{
+            tabBarLabel: 'VGA',
+            tabBarIcon: ({ tintColor }) => (
+                <Image
+                    source={require('../../images/appIcon/VGA.png')}
+                    style={[styles.icon, {tintColor: tintColor}]}
+                />
+            ),
+        }
+    },
 }, {
     tabBarPosition: 'top',
     animationEnabled: true,
     tabBarOptions: {
+        showIcon: true,
         activeTintColor: '#82B1FF',
+        pressColor: 'red', 
+        indicatorStyle: {
+            backgroundColor: '#841111',
+        },
+        style: {
+            backgroundColor: '#292929',
+            height: 100,
+            justifyContent: 'center',
+            
+        }
+    },
+});
+
+export const CPUTab = TabNavigator({
+    CPU_Intel: {
+        screen: CPU_Intel,
+        navigationOptions:{
+            tabBarLabel: 'CPU INTEL',
+        }
+    },
+    CPU_AMD: {screen: CPU_AMD},
+}, {
+    tabBarPosition: 'top',
+    tabBarComponent: TabBarTop,
+    tabBarOptions: {
+        showLabel: true,
+        activeTintColor: '#82B1FF',
+        pressColor: 'red', 
+        indicatorStyle: {
+            backgroundColor: '#841111',
+            height: 3
+        },
+        style: {
+            backgroundColor: '#292929',
+            height: 50,
+            justifyContent: 'center',
+        }
     },
 });
 
@@ -109,7 +172,7 @@ const styles = StyleSheet.create({
     },
 
     icon: {
-        width: 26,
-        height: 26,
+        width: 25,
+        height: 25,
     },
 });

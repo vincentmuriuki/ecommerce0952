@@ -5,23 +5,18 @@ import Swiper from 'react-native-swiper';
 
 
 // create a component
-const { height, width } = Dimensions.get('window');
+const { width, height } = Dimensions.get('window');
 const imgWidth = width;
 const imgHeight = imgWidth /2;
 export default class BannerSlider extends Component {
     render() {
         return (
-            <View>
-                <View >
-                    <Text>This is banner slider</Text>
-                </View>
-                <View>
-                    <Swiper showsButtons={true} width={imgWidth} height={imgHeight}>
-                        <Image source={require("../../images/temp/little.jpg")}/>
-                        <Image source={require("../../images/temp/midi.jpg")}/>
-                        <Image source={require("../../images/temp/maxi.jpg")}/>
-                    </Swiper>
-                </View>
+            <View style={{flex:0.4}}>
+                <Swiper showsButtons={true} width={imgWidth} height={imgHeight}>
+                    <Image style = {styles.imageBanner} source={require("../../images/banners/banner1.png")}/>
+                    <Image style = {styles.imageBanner} source={require("../../images/banners/banner2.png")}/>
+                    <Image style = {styles.imageBanner} source={require("../../images/banners/banner3.png")}/>
+                </Swiper>
             </View>
             
         );

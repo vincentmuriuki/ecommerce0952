@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Button } from 'react-native';
 import {MainTab} from './Router';
-import Header from './header'
+import Header from './header';
 
 export default class Home extends Component {
     static navigationOptions = {
