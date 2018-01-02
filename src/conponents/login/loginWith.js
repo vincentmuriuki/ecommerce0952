@@ -42,7 +42,10 @@ class LoginWith extends Component {
 
                 <View style={styles.signup}>
                     <Text style={{color:'white'}}>Don't have an account ? </Text>
-                    <TouchableOpacity>
+                    
+                    <TouchableOpacity
+                        onPress={()=> this.props.navigation.navigate('SignUp')}
+                        >
                         <Text style={styles.signupText}>
                             JOIN US
                         </Text>

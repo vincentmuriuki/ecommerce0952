@@ -1,37 +1,42 @@
 //import liraries
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Image, KeyboardAvoidingView, Dimensions} from 'react-native';
+import {View, Text, StyleSheet, Image, Dimensions} from 'react-native';
+import Swiper from 'react-native-swiper';
 
 
 // create a component
-class BannerSlider extends Component {
+const { height, width } = Dimensions.get('window');
+const imgWidth = width;
+const imgHeight = imgWidth /2;
+export default class BannerSlider extends Component {
     render() {
         return (
-            <View style={styles.container}>
-
+            <View>
+                <View >
+                    <Text>This is banner slider</Text>
+                </View>
                 <View>
-                    <Text>This is bannerSlider</Text>
+                    <Swiper showsButtons={true} width={imgWidth} height={imgHeight}>
+                        <Image source={require("../../images/temp/little.jpg")}/>
+                        <Image source={require("../../images/temp/midi.jpg")}/>
+                        <Image source={require("../../images/temp/maxi.jpg")}/>
+                    </Swiper>
                 </View>
             </View>
+            
         );
     }
 }
 
 // define your styles
 const styles = StyleSheet.create({
-    container: {
-        backgroundColor: '#e74c3c',
-        alignItems: 'center',
-        height: 200,
-        //justifyContent: 'center'
+    swiper: {
+        flex: 1,
+        backgroundColor: 'yellow',
     },
 
     imageBanner: {
-        backgroundColor: '#1abc9c',
-        width: 100,
-        resizeMode: 'contain'
-    },
+        height: imgHeight,
+        width: imgWidth,
+    }
 });
-
-//make this component available to the app
-export default BannerSlider;

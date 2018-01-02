@@ -24,7 +24,9 @@ class Login extends Component {
                 </View>
 
                 <View>
-                    <LoginWith/>
+                    <LoginWith
+                        navigation = {this.props.navigation}
+                    />
                 </View>
 
             </KeyboardAvoidingView>

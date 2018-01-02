@@ -46,7 +46,10 @@ class SignupForm extends Component {
                     style={styles.input}
                 />
 
-                <TouchableOpacity style={styles.buttonContainer}>
+                <TouchableOpacity 
+                    style={styles.buttonContainer}
+                    onPress={()=> this.props.navigation.navigate('MainScreen')}
+                >
                     <Text style={styles.buttonText}>
                         Try it Free and make a purchase
                     </Text>
@@ -54,7 +57,9 @@ class SignupForm extends Component {
 
                 <View style={styles.login}>
                     <Text style={{color:'white'}}>Already have an account ? </Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={()=> this.props.navigation.navigate('Login')}
+                    >
                         <Text style={styles.loginText}>
                             SIGN IN
                         </Text>

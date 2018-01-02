@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Button } from 'react-native';
-import {MenuTab, MainTab} from './Router';
+import {MainTab} from './Router';
+import Header from './header'
 
 export default class Home extends Component {
     static navigationOptions = {
@@ -8,7 +9,11 @@ export default class Home extends Component {
     };
     render() {
         return (
-            <MainTab/>
+            <View style={{flex:1}}>
+                <Header navigation = {this.props.navigation}/>
+                <MainTab/>
+            </View>
+            
         );
     }
 }
