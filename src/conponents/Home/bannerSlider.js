@@ -1,6 +1,6 @@
 //import liraries
 import React, {Component} from 'react';
-import {View, Text, StyleSheet, Image, Dimensions} from 'react-native';
+import {View, Text, StyleSheet,TouchableOpacity, Image, Dimensions} from 'react-native';
 import Swiper from 'react-native-swiper';
 
 

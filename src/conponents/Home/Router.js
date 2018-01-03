@@ -24,8 +24,8 @@ import Cart from "../Cart/Cart";
 import Header from '../Home/header';
 
 //SideBar
-import SideBar from "../SideBarLeft/SideBar";
 import SideBarDrawer from '../SideBarLeft/SideBarDrawer';
+import SideBarStackNavigator from '../SideBarLeft/SideBarStackNavigator';
 
 //MainTab
 import HomeScreen from "./homeScreen";
@@ -39,6 +39,8 @@ import CPU_AMD from "../Home/CPU/CpuAMD";
 import Ram from "./ram";
 import MainBoard from "./mainBoard";
 import VGA from './VGA/VGA'
+import SideBarContentComp from '../SideBarLeft/sideBarContentComp';
+import Profile from '../Profile/Profile';
 
 export const HomeStack = StackNavigator({
     OpeningScreen: {screen: OpeningScreen},
@@ -56,17 +58,15 @@ export const HomeStack = StackNavigator({
 });
 
 export const SideBarLeft = DrawerNavigator({
-    Home: {
-        path: "/",
-        screen: HomeScreen,
-    },
-    SideBar: {
-        path: "/sent",
-        screen: SideBar,
-    }
+    Profile:{screen: Profile},
+    HomeScreen: {screen: HomeScreen,},
+    Checkout: {screen: Checkout},
+    OrderHistory: {screen: OrderHistory},
+    Login: {screen: Login},
 }, {
-    initialRouteName: 'Home',
-    drawerPosition: 'left'
+    initialRouteName: 'HomeScreen',
+    drawerPosition: 'left',
+    contentComponent: SideBarContentComp,
 });
 
 export const MenuTab = TabNavigator({

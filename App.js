@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, } from 'react-native';
-import {HomeStack} from "./src/conponents/Home/Router"
+import { View, StyleSheet, Text, } from 'react-native';
+import {HomeStack, SideBarStack} from "./src/conponents/Home/Router"
 
 export default class Sale0952 extends Component {
     render() {

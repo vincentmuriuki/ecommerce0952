@@ -1,6 +1,7 @@
 //import liraries
 import React, { Component } from 'react';
 import {View, ScrollView, Text, StyleSheet, Image, Dimensions, TouchableOpacity } from 'react-native';
+import Swiper from 'react-native-swiper';
 
 const {height, width} = Dimensions.get("window");
 const productHeight = height/4;
@@ -56,6 +57,8 @@ class CPUIntel extends Component {
                     </TouchableOpacity>
                 </View>
             </ScrollView>
+
+           
         );
     }
 }
@@ -75,7 +78,7 @@ const styles = StyleSheet.create({
 
     productContainer:{
         width: productWidth,
-        height: productHeight +100,
+        height: productHeight +70,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#292929',

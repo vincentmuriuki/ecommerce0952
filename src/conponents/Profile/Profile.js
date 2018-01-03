@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View} from 'react-native';
 
-export default class ChangeInfo extends Component {
+export default class Profile extends Component {
     render() {
         return (
             <View style={styles.container}>
                 <Text>
-                    This is ChangeInfo component.
+                    This is Profile component.
                 </Text>
             </View>
         );
