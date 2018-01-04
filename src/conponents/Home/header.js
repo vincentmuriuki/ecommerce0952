@@ -6,6 +6,7 @@ const heightScreen = height;
 const widthScreen = width;
 
 export default class Header extends Component {
+
     render() {
         return (
             <View>
@@ -21,7 +22,7 @@ export default class Header extends Component {
                     <Text style={styles.textStyle}>DOO STORE</Text>
                     <TouchableOpacity 
                         style={styles.iconContainer}
-                        onPress={()=> this.props.navigation.navigate('Cart')}
+                        onPress={()=>this.props.navigation.navigate('Cart')}
                     >
                         <Image style={styles.icon} source={require("../../images/appIcon/cart2.png")}/>
                     </TouchableOpacity>

@@ -13,18 +13,25 @@ class OpeningScreen extends Component {
                 <View style={styles.logoContainer}>
                     <Logo/>
                 </View>
-                <View style={styles.button}>
-                    <Button
-                        onPress ={() => this.props.navigation.navigate('Login')}
-                        title="LOG IN"
-                        color="#03A9F4"
-                    />
-                </View>
-                <View style={styles.button} >
+
+                <TouchableOpacity 
+                    onPress={()=> this.props.navigation.navigate('Login')}
+                    >               
+                    <View style={styles.loginContainer} >
+                        <Text style={styles.login}>
+                            LOG IN
+                        </Text>
+                    </View>
+                </TouchableOpacity>
+                
+                        
+                
+
+                <View style={styles.skipContainer} >
                     <TouchableOpacity 
-                        onPress={()=> this.props.navigation.navigate('MainScreen')}
+                        onPress={()=> this.props.navigation.navigate('SideBarLeft')}
                         >               
-                        <Text style={styles.skip}>
+                        <Text style={styles.login}>
                             Skip and start shoping now >
                         </Text>
                     </TouchableOpacity>    
@@ -39,7 +46,10 @@ class OpeningScreen extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#3498db',
+        backgroundColor: '#292929',
+        alignContent: 'center',
+        alignItems: 'center',
+        justifyContent:'space-between',
     },
 
     logoContainer:{
@@ -47,16 +57,27 @@ const styles = StyleSheet.create({
         //paddingBottom: 50,
     },
 
-    button:{
+    loginContainer:{
+        alignItems: 'center',
+        alignContent: 'center',
+        backgroundColor: '#454545',
+        width: 200,
+    },
+
+    login:{
+        color: '#82B1FF',
+        alignItems: 'center',
+        paddingVertical: 10,
+        fontFamily:'Syncopate-Bold',
+    },
+
+    skipContainer:{
         alignItems: 'center',
         alignContent: 'center',
         paddingTop: 100,
     },
 
-    skip:{
-        color: '#ffffff',
-        alignItems: 'center',
-    }
+
 });
 
 //make this component available to the app

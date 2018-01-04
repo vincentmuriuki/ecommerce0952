@@ -12,7 +12,10 @@ class CPUIntel extends Component {
         return (
             <ScrollView style={styles.container}>
                 <View style={styles.body}>
-                    <TouchableOpacity style={styles.productContainer}>
+                    <TouchableOpacity 
+                        style={styles.productContainer}
+                        onPress={()=>this.props.navigation.navigate('ProductDetail')}
+                    >
                         <View>
                             <Image 
                                 style={styles.productImage}
@@ -23,7 +26,10 @@ class CPUIntel extends Component {
                         <Text style={styles.productPrice}>$1984.99</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.productContainer}>
+                    <TouchableOpacity 
+                        style={styles.productContainer}
+                        onPress={()=>this.props.navigation.navigate('ProductDetail')}
+                    >
                         <View>
                             <Image 
                                 style={styles.productImage}
@@ -34,7 +40,10 @@ class CPUIntel extends Component {
                         <Text style={styles.productPrice}>$1984.99</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.productContainer}>
+                    <TouchableOpacity 
+                        style={styles.productContainer}
+                        onPress={()=>this.props.navigation.navigate('ProductDetail')}
+                    >
                         <View>
                             <Image 
                                 style={styles.productImage}
@@ -45,7 +54,10 @@ class CPUIntel extends Component {
                         <Text style={styles.productPrice}>$1984.99</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.productContainer}>
+                    <TouchableOpacity 
+                        style={styles.productContainer}
+                        onPress={()=>this.props.navigation.navigate('ProductDetail')}
+                    >
                         <View>
                             <Image 
                                 style={styles.productImage}

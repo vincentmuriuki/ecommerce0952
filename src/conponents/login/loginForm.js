@@ -78,20 +78,21 @@ const styles = StyleSheet.create({
     buttonContainer:{
         margin: 10,
         padding: 10,
-        backgroundColor: '#2980b9',
+        backgroundColor: '#454545',
         borderRadius: 20
     },
 
     buttonText:{
         color: 'white',
         textAlign: 'center',
+        color:'#82B1FF'
     },
 
     forgotPassword:{
         paddingRight:10,
         paddingVertical: 10,
         textAlign: 'right',
-        color:'white',
+        color:'#82B1FF',
     }
 
 });

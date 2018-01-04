@@ -60,7 +60,8 @@ class LoginWith extends Component {
 const styles = StyleSheet.create({
     line:{
         color: 'white',
-        textAlign: 'center'
+        textAlign: 'center',
+        color: '#82B1FF'
     },
     iconContainer:{
         paddingHorizontal: 70,
@@ -82,7 +83,7 @@ const styles = StyleSheet.create({
 
     signupText:{
         fontWeight:'bold',
-        color:'white'
+        color:'#82B1FF',
     }
 
 });

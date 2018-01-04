@@ -1,9 +1,9 @@
 //import liraries
 import React, {Component} from 'react';
 import {View, Text, ScrollView} from 'react-native';
-import {MenuTab} from './Router';
-import Header from './header';
+import {MenuTab} from '../Router/Router';
 import BannerSlider from './bannerSlider';
+import Header from './header';
 
 // create a component
 export default class HomeScreen extends Component {
@@ -12,7 +12,7 @@ export default class HomeScreen extends Component {
             <View style={{flex:1}}>
                 <Header navigation = {this.props.navigation}/>
                 <BannerSlider/>
-                <MenuTab/>
+                <MenuTab style={{flex:1}}/>
             </View>
         );
     }

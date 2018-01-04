@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet,Image, TouchableOpacity } from 'react-native';
 import {NavigationActions} from 'react-navigation';
-import PropTypes from 'prop-types';
 
 // create a component
 class SideBarContentComp extends Component {
