@@ -35,6 +35,7 @@ export default class Header extends Component {
                             autoCapitalize='none'
                             selectionColor='white'
                             autoCorrect={false}
+                            autoFocus={true}
                             underlineColorAndroid='transparent'
                             style={styles.textInputStyle}
                         />
@@ -74,9 +75,6 @@ const styles = StyleSheet.create({
 
     searchBar: {
         backgroundColor: '#720000',
-        //backgroundColor: 'yellow',
-        alignContent:'center',
-        alignItems: 'center',
     },
     textInputStyle:{
         color: 'white',

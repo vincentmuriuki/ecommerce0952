@@ -96,7 +96,7 @@ export default class Cart extends Component {
                     
                     <TouchableOpacity style={styles.button}>
                         <View>
-                            <Text style={styles.textStyle}>CHECK OUT</Text>
+                            <Text style={styles.textStyle}>GO TO CHECK OUT</Text>
                         </View>
                     </TouchableOpacity>
                 </View>
