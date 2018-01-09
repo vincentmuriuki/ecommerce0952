@@ -1,6 +1,6 @@
 import { AppRegistry } from 'react-native';
 import App from './App'
-import Checkout from './src/conponents/Checkout/Checkout';
+import Profile from './src/conponents/Profile/Profile';
 
 
 AppRegistry.registerComponent('Sale0952', () => App);

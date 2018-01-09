@@ -28,6 +28,14 @@ class SideBarContentComp extends Component {
                     <Text style={styles.customerName} >Customer's Name</Text>
                     <Text style={styles.customerAccumulation} >Score: 100</Text>
                 </View>
+
+                <View style={styles.textContainer}>
+                    <TouchableOpacity
+                        onPress={this.navigateToScreen('HomeScreen')}
+                    >
+                        <Text  style={styles.textStyle}>Home</Text>
+                    </TouchableOpacity>
+                </View>
     
                 <View style={styles.textContainer}>
                     <TouchableOpacity
@@ -39,25 +47,9 @@ class SideBarContentComp extends Component {
     
                 <View style={styles.textContainer}>
                     <TouchableOpacity
-                        onPress={this.navigateToScreen('HomeScreen')}
-                    >
-                        <Text  style={styles.textStyle}>Home</Text>
-                    </TouchableOpacity>
-                </View>
-    
-                <View style={styles.textContainer}>
-                    <TouchableOpacity
                             onPress={this.navigateToScreen('Checkout')}
                     >
                         <Text style={styles.textStyle}>Check out</Text>
-                    </TouchableOpacity>
-                </View>
-    
-                <View style={styles.textContainer}>
-                    <TouchableOpacity
-                            onPress={this.navigateToScreen('OrderHistory')}
-                    >
-                        <Text  style={styles.textStyle}>Order History</Text>
                     </TouchableOpacity>
                 </View>
     

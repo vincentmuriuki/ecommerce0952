@@ -25,7 +25,6 @@ import ProductDetail from '../ProductDetail/ProductDetail';
 import Cart from "../Cart/Cart";
 
 //SideBar
-import OrderHistory from "../OrderHistory/OrderHistory";
 import Checkout from "../Checkout/Checkout";
 import SideBarContentComp from '../SideBarLeft/sideBarContentComp';
 import Profile from '../Profile/Profile';
@@ -50,7 +49,6 @@ export const SideBarLeft = DrawerNavigator({
     HomeScreen: {screen: HomeStack},
     Profile:{screen: Profile},
     Checkout: {screen: Checkout},
-    OrderHistory: {screen: OrderHistory},
     Login: {screen: Login},
     Cart: {screen: Cart},
 }, {
@@ -63,7 +61,6 @@ export const SideBarStack = StackNavigator({
     HomeScreen: {screen: HomeStack},
     Profile:{screen: Profile},
     Checkout: {screen: Checkout},
-    OrderHistory: {screen: OrderHistory},
     Login: {screen: Login},
 }, {
     initialRouteName: 'HomeScreen',
