@@ -62,11 +62,7 @@ class CPUIntel extends Component {
                         <View style={{flexDirection:'row'}}>
                             <TouchableOpacity 
                                 style={styles.productContainer}
-                                onPress={()=>{
-                                    console.log(this.props.navigation)
-                                    this.props.homeprops.navigation.navigate('ProductDetail')
-                                }
-                                }
+                                onPress={()=>this.props.navigation.navigate('ProductDetail')}
                             >
                                 <View>
                                     <Image 
@@ -80,11 +76,7 @@ class CPUIntel extends Component {
 
                             <TouchableOpacity 
                                 style={styles.productContainer}
-                                onPress={()=>{
-                                    console.log(this.props.navigation)
-                                    this.props.homeprops.navigation.navigate('ProductDetail')
-                                }
-                                }
+                                onPress={()=>this.props.navigation.navigate('ProductDetail')}
                             >
                                 <View>
                                     <Image 
