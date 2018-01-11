@@ -66,6 +66,13 @@ export const SideBarStack = StackNavigator({
     initialRouteName: 'HomeScreen',
 });
 
+export const Detail_Stack = StackNavigator({
+    CPU_Intel: {screen: CPU_Intel,},
+    //ProductDetail: {screen: ProductDetail},
+},{
+    headerMode: 'none' ,
+});
+
 export const MainStack = StackNavigator({
     OpeningScreen: {screen: OpeningScreen},
     Login: {screen: Login},
@@ -73,18 +80,15 @@ export const MainStack = StackNavigator({
     LoginWith:{screen:LoginWith},
     SignUp: {screen: SignUp},
     SignupForm:{screen: SignupForm},
-    SideBarLeft: {screen: SideBarLeft}
+    SideBarLeft: {screen: SideBarLeft},
+    HomeScreen: {screen: HomeScreen},
+    ProductDetail: {screen: ProductDetail},
 },{
     initialRouteName: 'OpeningScreen',
     headerMode: 'none' ,
 });
 
-export const Detail_Stack = StackNavigator({
-    CPU_Intel: {screen: CPU_Intel,},
-    ProductDetail: {screen: ProductDetail},
-},{
-    headerMode: 'none' ,
-});
+
 
 export const CPUTab = TabNavigator({
     CPU_Intel: {

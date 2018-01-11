@@ -35,7 +35,6 @@ export default class Header extends Component {
                             autoCapitalize='none'
                             selectionColor='white'
                             autoCorrect={false}
-                            autoFocus={true}
                             underlineColorAndroid='transparent'
                             style={styles.textInputStyle}
                         />
@@ -78,10 +77,12 @@ const styles = StyleSheet.create({
     },
     textInputStyle:{
         color: 'white',
+        width: widthScreen - 10,
+        borderWidth: 1,
+        borderColor: 'white',
         paddingHorizontal: 20,
-        paddingTop: 0,
-        paddingBottom: 10,
-        width: widthScreen - 50,
+        paddingVertical: 5,
+        margin: 5,
     }
 });
 

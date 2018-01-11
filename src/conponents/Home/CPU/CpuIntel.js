@@ -58,21 +58,44 @@ class CPUIntel extends Component {
                 <View style={styles.body}>
                     <FlatList
                         data={this.state.listProductsViewed}
-                        horizontal
                         renderItem={({item}) => 
-                        <TouchableOpacity 
-                            style={styles.productContainer}
-                            onPress={()=>this.props.navigation.navigate('ProductDetail')}
-                        >
-                            <View>
-                                <Image 
-                                    style={styles.productImage}
-                                    source={item.image}
-                                />
-                            </View>
-                            <Text style={styles.productName}>{item.name}</Text>
-                            <Text style={styles.productPrice}>{item.price}</Text>
-                        </TouchableOpacity>
+                        <View style={{flexDirection:'row'}}>
+                            <TouchableOpacity 
+                                style={styles.productContainer}
+                                onPress={()=>{
+                                    console.log(this.props.navigation)
+                                    this.props.homeprops.navigation.navigate('ProductDetail')
+                                }
+                                }
+                            >
+                                <View>
+                                    <Image 
+                                        style={styles.productImage}
+                                        source={item.image}
+                                    />
+                                </View>
+                                <Text style={styles.productName}>{item.name}</Text>
+                                <Text style={styles.productPrice}>{item.price}</Text>
+                            </TouchableOpacity>
+
+                            <TouchableOpacity 
+                                style={styles.productContainer}
+                                onPress={()=>{
+                                    console.log(this.props.navigation)
+                                    this.props.homeprops.navigation.navigate('ProductDetail')
+                                }
+                                }
+                            >
+                                <View>
+                                    <Image 
+                                        style={styles.productImage}
+                                        source={item.image}
+                                    />
+                                </View>
+                                <Text style={styles.productName}>{item.name}</Text>
+                                <Text style={styles.productPrice}>{item.price}</Text>
+                            </TouchableOpacity>
+                        </View>
                         }
                     />
                 </View>
@@ -102,7 +125,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#292929',
-        marginBottom: 10,
+        margin: 5,
     },
 
     productImage:{

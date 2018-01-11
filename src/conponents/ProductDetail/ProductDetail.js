@@ -56,7 +56,6 @@ export default class ProductDetail extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <Header navigation = {this.props.navigation} />
                 <ScrollView>
                     <View style={styles.blockContainer}>
                         <Image style={styles.image}
